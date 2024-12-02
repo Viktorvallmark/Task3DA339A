@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 /** Cake */
-public class Cake {
+public class Cake extends BakeryItem {
 
   private List<Fillings> fillings;
   private short numSlices;
@@ -19,10 +19,11 @@ public class Cake {
       this.numSlices = numSlices;
     }
     Optional<String> optName = Optional.ofNullable(name);
-    this.name = optName
-        .map(String::trim)
-        .filter(n -> !n.equals(""))
-        .orElseThrow(); // maybe change to n.isEmpty() and n.inBlank()
+    this.name =
+        optName
+            .map(String::trim)
+            .filter(n -> !n.equals(""))
+            .orElseThrow(); // maybe change to n.isEmpty() and n.inBlank()
     //
     int sum = 0;
     for (Fillings fill : fillings) {
