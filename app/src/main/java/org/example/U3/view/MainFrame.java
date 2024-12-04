@@ -21,8 +21,9 @@ public class MainFrame extends JFrame {
   /**
    * This method sets the information in the LEFT panel of the main window.
    *
-   * @param informationArray An array of String where each element will be shown one line in the
-   *     panel.
+   * @param informationArray An array of String where each element will be shown
+   *                         one line in the
+   *                         panel.
    */
   public void populateLeftPanel(String[] informationArray) {
     mainPanel.getLeftPanel().populateList(informationArray);
@@ -31,34 +32,41 @@ public class MainFrame extends JFrame {
   /**
    * This method sets the information in the RIGHT panel of the main window.
    *
-   * @param informationArray An array of String where each element will be shown one line in the
-   *     panel.
+   * @param informationArray An array of String where each element will be shown
+   *                         one line in the
+   *                         panel.
    */
   public void populateRightPanel(String[] informationArray) {
     mainPanel.getRightPanel().populateList(informationArray);
   }
 
   /**
-   * This method removes information in the RIGHT panel of the main window. There are some problems
-   * with this in this code and "ghost items" might appear in the list view at the top of the list
-   * after use of this method. This might throw selected indexes of synchronization if this is used.
+   * This method removes information in the RIGHT panel of the main window. There
+   * are some problems
+   * with this in this code and "ghost items" might appear in the list view at the
+   * top of the list
+   * after use of this method. This might throw selected indexes of
+   * synchronization if this is used.
    */
   public void clearRightPanel() {
     mainPanel.getRightPanel().clearList();
   }
 
   /**
-   * This method returns the index value as an int of the selected row in the list in the left panel
+   * This method returns the index value as an int of the selected row in the list
+   * in the left panel
    * of the main window.
    *
-   * @return the index of the selected row as an int. If no selection exists -1 is returned.
+   * @return the index of the selected row as an int. If no selection exists -1 is
+   *         returned.
    */
   public int getSelectionLeftPanel() {
     return mainPanel.getLeftPanel().getLeftPanelList().getSelectedIndex();
   }
 
   /**
-   * This method sets a text that shows to the farthest right in the window above the right
+   * This method sets a text that shows to the farthest right in the window above
+   * the right
    * listpanel.
    *
    * @param newText the text that is shown in the GUI
@@ -68,7 +76,8 @@ public class MainFrame extends JFrame {
   }
 
   /**
-   * This method sets a text that shows a bit to the right of the middle of the window above the
+   * This method sets a text that shows a bit to the right of the middle of the
+   * window above the
    * right listpanel.
    *
    * @param newText the text that is shown in the GUI
@@ -82,7 +91,9 @@ public class MainFrame extends JFrame {
     mainPanel.getLeftPanel().getBtnShowCake().setEnabled(false);
   }
 
-  /** This method disables the possibility to press the button labeled "Drinks". */
+  /**
+   * This method disables the possibility to press the button labeled "Drinks".
+   */
   public void disablePerUnitItemMenuButton() {
     mainPanel.getLeftPanel().getBtnShowPerUnitItem().setEnabled(false);
   }
@@ -97,7 +108,10 @@ public class MainFrame extends JFrame {
     mainPanel.getRightPanel().getBtnCreateOrder().setEnabled(false);
   }
 
-  /** This method disables the possibility to press the button labeled "View order". */
+  /**
+   * This method disables the possibility to press the button labeled "View
+   * order".
+   */
   public void disableViewSelectedOrderButton() {
     mainPanel.getRightPanel().getBtnViewSelectedOrder().setEnabled(false);
   }
@@ -114,8 +128,10 @@ public class MainFrame extends JFrame {
   }
 
   /**
-   * This method is called by other parts of the Gui when a button is pressed. The method
-   * buttonPressed in class Controller is called and the type of pressed button is sent as an
+   * This method is called by other parts of the Gui when a button is pressed. The
+   * method
+   * buttonPressed in class Controller is called and the type of pressed button is
+   * sent as an
    * argument.
    *
    * @param pressedButton the type of button
