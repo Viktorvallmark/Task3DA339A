@@ -19,11 +19,12 @@ public class Cake extends BakeryItem {
       this.numSlices = numSlices;
     }
     Optional<String> optName = Optional.ofNullable(name);
-    this.name =
-        optName
-            .map(String::trim)
-            .filter(n -> !n.equals(""))
-            .orElseThrow(); // maybe change to n.isEmpty() and n.inBlank()
+    this.name = optName
+        .map(String::trim)
+        .filter(n -> !n.equals(""))
+        .filter(n -> !n.isEmpty())
+        .filter(n -> !n.isBlank())
+        .orElseThrow(); // maybe change to n.isEmpty() and n.inBlank()
     //
     int sum = 0;
     for (Fillings fill : fillings) {
